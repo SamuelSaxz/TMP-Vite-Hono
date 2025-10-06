@@ -1,0 +1,21 @@
+{
+  "name": "ticket",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "db:generate": "bun run --filter server db:generate",
+    "db:migrate": "bun run --filter server db:migrate",
+    "db:studio": "bun run --filter server db:studio"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
